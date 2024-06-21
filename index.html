@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysterious Forest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="full-page-box">
+        <div class="title">
+            <center><h1>The Mysterious Forest</h1></center>
+            <center><p>Created by Seaam</p></center>
+        </div><br><br><br>
+
+        <div id="content">
+            <button id="startgame" onclick="location.href='chapter1.html'">Start Game</button><br><br>
+            <br><button id="popupButton">Plot</button><br><br>
+            <br><button id="popupButton2">About</button><br><br>
+            <br><button id="startgame" onclick="https://formsubmit.co/el/kosewu">Feedback</button>
+            
+        <div id="bottom-text">Copyright @The-Mysterious-Forest (2024).<br>All rights reserved.</div>
+        </div>
+
+    
+        <div id="popupBox" class="popup">
+            <div class="popup-content">
+                <span class="close-button">&times;</span>
+                <p>Lucas is a brave sailor who sails towards uncharted water. One fateful day, a violent storm struck, and his ship was torn apart. He fought to stay afloat, but eventually lost consciousness. When he woke up, he found himself on the shores of a mysterious island, surrounded by a dense, dark forest. Disoriented and alone, brave Lucas ventured into the forest, determined to survive and find a way home. Play as Lucas and help him to escape the forest in the safest way possible.</p>
+            </div>
+        </div>
+        <div id="popupBox2" class="popup2">
+            <div class="popup-content2">
+                <span class="close-button2">&times;</span>
+                <h2>This project is made by Seaam.</h2><br>
+                <p>I am a front-end web developer, working on websites since 2020. My goal is to create simple yet meaningful websites, with strong focus on responsive design, accessibility and performance.<br><br>Call me: +8801980008808<br>Email: shahriarseaam2022@outlook.com<br><a class="link" href="https://formsubmit.co/el/kosewu" target="_blank" style="color: #bbdbaa">Give Feedback.</a></p>
+            </div>
+        </div>
+    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const popupButton = document.getElementById('popupButton');
+    const popupBox = document.getElementById('popupBox');
+    const closeButton = document.querySelector('.close-button');
+    const content = document.getElementById('content');
+
+    popupButton.addEventListener('click', function() {
+        popupBox.style.display = 'flex';
+        content.style.filter = 'blur(5px)';
+    });
+
+    closeButton.addEventListener('click', function() {
+        popupBox.style.display = 'none';
+        content.style.filter = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === popupBox) {
+            popupBox.style.display = 'none';
+            content.style.filter = 'none';
+        }
+    });
+});
+
+    
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const popupButton = document.getElementById('popupButton2');
+    const popupBox = document.getElementById('popupBox2');
+    const closeButton = document.querySelector('.close-button2');
+    const content = document.getElementById('content');
+
+    popupButton.addEventListener('click', function() {
+        popupBox.style.display = 'flex';
+        content.style.filter = 'blur(5px)';
+    });
+
+    closeButton.addEventListener('click', function() {
+        popupBox.style.display = 'none';
+        content.style.filter = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === popupBox) {
+            popupBox.style.display = 'none';
+            content.style.filter = 'none';
+        }
+    });
+});
+        </script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the full-page box */
+.full-page-box {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #bbdbaa;
+    font-family:cursive;
+    width: 60%;
+    height: 90%; /* Full viewport height */
+    position: fixed; /* Ensures it takes the entire viewport height */
+    box-shadow: 0px 0px 10px #000000;
+}
+
+/* Responsive text size */
+.full-page-box h1 {
+    font-size: 50px;
+    font-family: monospace;
+}
+.full-page-box p{
+    font-size:15px;
+    font-family: monospace;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+#content {
+    text-align: center;
+    padding: 50px;
+    transition: filter 0.3s ease;
+}
+
+#popupButton {
+    font-family: monospace;
+    background-color: #282c34;
+    box-shadow: 0px 0px 7px #bbdbaa;
+    border: none;
+    color: #bbdbaa;
+    width: 30%;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#popupButton2 {
+    font-family: monospace;
+    background-color: #282c34;
+    box-shadow: 0px 0px 7px #bbdbaa;
+    border: none;
+    color: #bbdbaa;
+    width: 30%;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#startgame{    background-color: #282c34;
+    font-family: monospace;
+    box-shadow: 0px 0px 7px #bbdbaa;
+    border: none;
+    color: #bbdbaa;
+    width: 30%;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#popupButton:hover, #popupButton2:hover, #startgame:hover{
+    box-shadow: none;
+    transition: 0.5s;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #282c34;
+    color: #bbdbaa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.popup2 {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content2 {
+    background-color: #282c34;
+    color: #bbdbaa;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+.close-button2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .full-page-box {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .full-page-box h1 {
+        font-size: 25px /* Adjust as needed */
+    }
+    .full-page-box p {
+        font-size: 13px /* Adjust as needed */
+    }
+    #startgame{
+        width: 70%;
+    }
+    #popupButton,#popupButton2{
+        width: 70%;
+    }
+}
+@media (max-width: 710px) {
+    #startgame{
+        width:70%;
+    }
+    #popupButton,#popupButton2{
+        width: 70%;
+    }
+}
+body {
+    font-family:monospace;
+    font-size: 10px;
+    background-color: #282c34;
+    color: #bbdbaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+#game-container {
+    position: relative;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: "Courier Prime", monospace;
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    max-width: 600px;
+    max-height: 100vh;
+    border: none;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: black;
+    overflow-y: auto;
+}
+#game-container p{
+    font-size: 30px;
+}
+#game-text {
+    margin-bottom: 20px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: black;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#choices button {
+    font-size: 15px;
+    font-family: monospace;
+    flex: 1 1 auto;
+    min-width: 120px;
+    height: 40px;
+    background-color: #bbdbaa;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+
+#choices button:hover {
+    background-color: #809c71;
+}
+
+#choices button:active {
+    background-color: black;
+    color: #bbdbaa;
+}
+@media (max-width: 600px) {
+    #choices button{
+        font-size: 11px;
+    }
+}
+#bottom-text {
+    font-family: monospace;
+    position: absolute;
+    bottom: 40px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #bbdbaa;
+}
